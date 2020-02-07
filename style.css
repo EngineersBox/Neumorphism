@@ -21,8 +21,6 @@ html[data-theme='dark'] .heading {
 
 html[data-theme='dark'] .heading h1:nth-child(1) {
   color: #111111;
-  margin-top: 0.8em;
-  margin-left: -0.2em;
 }
 
 html[data-theme='dark'] .wrapper {
@@ -53,12 +51,9 @@ html[data-theme='dark'] .padding {
   background-color: #232323;
 }
 
-html[data-theme='dark'] nav {
-  background-color: #232323;
-}
-
-html[data-theme='dark'] nav strong {
-  color: #aaaaaa;
+html[data-theme='dark'] .dark-mode-toggle {
+  color: #232323;
+  background-color: #eeeeee;
 }
 
 html[data-theme='dark'] .round {
@@ -116,32 +111,39 @@ html[data-theme='dark'] .round .ring-wrapper.red-orange {
   background: linear-gradient(to top, red, orange);
 }
 
+html[data-theme='dark'] .button {
+  background-color: #232323;
+  color: #eeeeee;
+}
+
+html[data-theme='dark'] .editor-tools ul .button a {
+  color: #eeeeee;
+}
+
+html[data-theme='dark'] .color-picker input[type=range]::-webkit-slider-thumb {
+  border-color: #232323;
+}
+
+html[data-theme='dark'] .padding {
+  background: #232323;
+}
+
 body {
   margin: 0;
 }
 
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #eeeeee;
+hr {
+  border-style: solid;
 }
 
-nav span {
-  margin-right: 3em;
+.dark-mode-toggle {
+  position: fixed;
+  top: 3em;
+  right: 3em;
+  background: #232323;
+  padding: 0.7em;
+  border-radius: 15px;
+  color: #eeeeee;
 }
 
 .heading {
@@ -162,18 +164,23 @@ nav span {
 }
 
 .heading h1 {
-  position: absolute;
+  display: block;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0.1em;
 }
 
 .heading h1:nth-child(1) {
   color: #b8b8b8;
-  margin-top: 0.8em;
-  margin-left: -0.2em;
+  position: absolute;
+  margin-top: 0.1em;
+  margin-left: 0em;
 }
 
 .padding {
   height: 10em;
   width: 100%;
+  background-color: #eeeeee;
 }
 
 .wrapper {
@@ -192,7 +199,7 @@ nav span {
       -ms-grid-row-align: center;
       align-self: center;
   margin: 1em;
-  width: 20vw;
+  width: auto;
   padding: 1em;
   color: #232323;
   border: 3px solid #eeeeee;
@@ -201,6 +208,14 @@ nav span {
 
 .container p {
   font-style: italic;
+}
+
+.container.left {
+  float: left;
+}
+
+.container.right {
+  float: right;
 }
 
 .inset {
@@ -273,6 +288,158 @@ nav span {
   background: linear-gradient(to top, red, orange);
 }
 
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #eeeeee;
+  color: #232323;
+}
+
+.editor {
+  width: 100%;
+  height: 50em;
+  background: #eaeaea;
+  border-radius: 15px;
+}
+
+.editor-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60vw;
+  height: 3em;
+}
+
+.editor-tools ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.editor-tools ul .button {
+  width: 5em;
+}
+
+.editor-tools ul .button a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.editor-tools ul .button a:visited {
+  color: #232323;
+}
+
+.color-picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.color-picker .preview {
+  width: 20em;
+  height: calc(10em - 8px);
+  padding: 8px;
+  background-color: #35dfeb;
+  background-clip: content-box;
+}
+
+.color-picker .slider {
+  width: 1.5em;
+  height: 10em;
+  padding: 5px;
+  border: 3px solid #eeeeee;
+  background-clip: content-box;
+}
+
+.color-picker .slide-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.color-picker input[type=range] {
+  width: 14.3em;
+  height: 2em;
+  background: -webkit-gradient(linear, right top, left top, from(black), to(#eeeeee));
+  background: linear-gradient(to left, black, #eeeeee);
+  border-radius: 5px;
+  -webkit-appearance: none;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg) translate(6.1em, 6.15em);
+}
+
+.color-picker input[type=range]::-webkit-slider-runnable-track {
+  height: 5px;
+  border: transparent;
+  border-radius: 3px;
+}
+
+.color-picker input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 3em;
+  width: 1.5em;
+  border: 3px solid #eeeeee;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border-radius: 10px;
+  margin-top: -1.2em;
+  cursor: pointer;
+}
+
+.color-picker input[type=range]:focus {
+  outline: transparent;
+}
+
+.color-picker input[type=range]:focus::-webkit-slider-runnable-track {
+  width: 10em;
+  background: -webkit-gradient(linear, right top, left top, from(black), to(#eeeeee));
+  background: linear-gradient(to left, black, #eeeeee);
+}
+
 input[type=checkbox] {
   visibility: hidden;
   height: 0;
@@ -314,5 +481,10 @@ input:checked + label:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+
+html, body, label, span, input, h1, p, div, ul, li, a, hr {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

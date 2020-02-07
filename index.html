@@ -11,16 +11,18 @@
 </head>
 
 <body>
-    <nav>
-        <span>
-            <strong>Dark mode:<br></strong>
-            <input class="container_toggle" type="checkbox" id="switch" name="mode">
-            <label for="switch">Toggle</label>
-        </span>
-    </nav>
+    <span class="dark-mode-toggle">
+        <strong>Dark mode:<br></strong>
+        <input class="container_toggle" type="checkbox" id="switch" name="mode">
+        <label for="switch">Toggle</label>
+    </span>
     <div class="heading">
-        <h1>NEUMORPHISM</h1>
-        <h1>NEUMORPHISM</h1>
+        <div class="container outset">
+            <h1>NEUMORPHISM
+                <h1>NEUMORPHISM</h1>
+            </h1>
+            <hr>
+        </div>
     </div>
     <div class="padding"></div>
     <div class="padding"></div>
@@ -58,7 +60,44 @@
         </div>
     </div>
     <div class="padding"></div>
+    <div class="wrapper">
+        <div class="container inset-outset left">
+            <div class="container editor-tools outset">
+                <ul>
+                    <li class="button outset"><a href="#">Load</a></li>
+                    <li class="button outset"><a href="#">Save</a></li class="outset">
+                    <li class="button outset"><a href="#">Insert</a></li class="outset">
+                    <li class="button outset"><a href="#">Link</a></li class="outset">
+                </ul>
+            </div>
+            <div class="editor" id="editor">
+        
+            </div>
+        </div>
+    </div>
+    <div class="padding"></div>
+    <div class="wrapper">
+        
+        <div class="container color-picker outset">
+            <h1>Colour Picker</h1>
+            <div class="wrapper">
+                <div class="container round">
+                    <div class="ring-wrapper blue-green">
+                        <div class="inner-ring"></div>
+                    </div>
+                </div>
+                <div class="container preview inset"></div>
+                <div class="container slider inset-outset">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="padding"></div>
     <script src="main.js"></script>
+    <script src="editor.js"></script>
 </body>
 
 </html>
