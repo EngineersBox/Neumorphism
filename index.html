@@ -7,6 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!--EDITOR.JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codex.editor.header@2.0.4/dist/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/warning@latest"></script>
+
     <title>Neumorphism</title>
 </head>
 
@@ -26,6 +33,7 @@
     </div>
     <div class="padding"></div>
     <div class="padding"></div>
+    <!--Example Containers of three shadow modes-->
     <div class="wrapper">
         <div class="container inset">
             <h1>Inset.</h1>
@@ -47,6 +55,7 @@
         </div>
     </div>
     <div class="padding"></div>
+    <!--Ring colours-->
     <div class="wrapper">
         <div class="container round">
             <div class="ring-wrapper red-orange">
@@ -60,6 +69,7 @@
         </div>
     </div>
     <div class="padding"></div>
+    <!--Text editor-->
     <div class="wrapper">
         <div class="container inset-outset left">
             <div class="container editor-tools outset">
@@ -70,19 +80,33 @@
                     <li class="button outset"><a href="#">Link</a></li class="outset">
                 </ul>
             </div>
-            <div class="editor" id="editor">
-        
-            </div>
+            <div class="editor" id="editor"></div>
         </div>
     </div>
     <div class="padding"></div>
+    <!--Colour Picker-->
     <div class="wrapper">
-        
         <div class="container color-picker outset">
             <h1>Colour Picker</h1>
             <div class="wrapper">
                 <div class="container round">
-                    <div class="ring-wrapper blue-green">
+                    <div class="wheel">
+                        <ul class="umbrella">
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                            <li class="color"></li>
+                        </ul>
+                    </div>
+                    <div class="ring-wrapper">
                         <div class="inner-ring"></div>
                     </div>
                 </div>
@@ -97,7 +121,7 @@
     </div>
     <div class="padding"></div>
     <script src="main.js"></script>
-    <script src="editor.js"></script>
+    <script src="text-editor.js"></script>
 </body>
 
 </html>

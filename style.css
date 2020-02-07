@@ -356,6 +356,141 @@ hr {
   color: #232323;
 }
 
+.umbrella, .color {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 6.5em);
+  top: calc(50% - 6.5em);
+  width: 13em;
+  height: 13em;
+}
+
+.wheel {
+  position: absolute;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  height: 13em;
+  width: 13em;
+  overflow: hidden;
+}
+
+.umbrella {
+  position: relative;
+  filter: blur(0.7em);
+  -webkit-filter: blur(0.7em);
+  transform: scale(1.35);
+  -webkit-transform: scale(1.35);
+}
+
+.color, .color:nth-child(n+7):after {
+  clip: rect(0, 13em, 13em, 6.5em);
+}
+
+.color:after, .color:nth-child(n+7) {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 6.5em);
+  top: calc(50% - 6.5em);
+  width: 13em;
+  height: 13em;
+  clip: rect(0, 6.5em, 13em, 0);
+}
+
+.color:nth-child(1):after {
+  background-color: #9ed110;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  z-index: 13;
+}
+
+.color:nth-child(2):after {
+  background-color: #50b517;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  z-index: 12;
+}
+
+.color:nth-child(3):after {
+  background-color: #31cc7e;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 11;
+}
+
+.color:nth-child(4):after {
+  background-color: #31a8cc;
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+  z-index: 10;
+}
+
+.color:nth-child(5):after {
+  background-color: #476eaf;
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+  z-index: 9;
+}
+
+.color:nth-child(6):after {
+  background-color: #9f49ac;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 8;
+}
+
+.color:nth-child(7):after {
+  background-color: #cc42a2;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.color:nth-child(8):after {
+  background-color: #ff3ba7;
+  -webkit-transform: rotate(210deg);
+          transform: rotate(210deg);
+}
+
+.color:nth-child(9):after {
+  background-color: #ff5800;
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
+}
+
+.color:nth-child(10):after {
+  background-color: #ff8100;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.color:nth-child(11):after {
+  background-color: #fec300;
+  -webkit-transform: rotate(300deg);
+          transform: rotate(300deg);
+}
+
+.color:nth-child(12):after {
+  background-color: #ffe600;
+  -webkit-transform: rotate(330deg);
+          transform: rotate(330deg);
+}
+
+.color:nth-child(13):after {
+  background-color: #ede604;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .color-picker {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,7 +511,7 @@ hr {
   width: 20em;
   height: calc(10em - 8px);
   padding: 8px;
-  background-color: #35dfeb;
+  background-color: #54d7e0;
   background-clip: content-box;
 }
 
