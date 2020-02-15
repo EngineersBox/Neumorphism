@@ -120,6 +120,10 @@ html[data-theme='dark'] .editor-tools ul .button a {
   color: #eeeeee;
 }
 
+html[data-theme='dark'] .ring-selector {
+  border: 3px solid #232323;
+}
+
 html[data-theme='dark'] .color-picker input[type=range]::-webkit-slider-thumb {
   border-color: #232323;
 }
@@ -499,7 +503,7 @@ hr {
   width: 3em;
   height: 1em;
   border-radius: 1.5em;
-  border: 3px solid #232323;
+  border: 3px solid #eeeeee;
   margin-left: 5em;
   margin-top: 2.1em;
   -webkit-transform: rotate(25deg);

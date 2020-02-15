@@ -98,6 +98,9 @@ html[data-theme='dark'] {
     .editor-tools ul .button a {
         color: $l_page_bg;
     }
+    .ring-selector {
+        border: 3px solid $d_page_bg;
+    }
     .color-picker {
         input[type=range]::-webkit-slider-thumb {
             border-color: $d_page_bg;
@@ -341,7 +344,7 @@ $colors: (#9ed110, #50b517, #31cc7e, #31a8cc, #476eaf, #9f49ac, #cc42a2, #ff3ba7
     width: 3em;
     height: 1em;
     border-radius: 1.5em;
-    border: 3px solid $d_page_bg;
+    border: 3px solid $l_page_bg;
     margin-left: 5em;
     margin-top: 2.1em;
     transform: rotate(25deg);
